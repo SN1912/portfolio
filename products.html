@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Products | AquaVistaPure</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+  <!-- SEO -->
+  <meta name="description" content="Premium customised water bottles by AquaVistaPure">
+  <meta name="author" content="AquaVistaPure">
+
+  <!-- ✅ FAVICON FIX (ALL SIZES) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar">
+    <div class="nav-logo">
+  <img src="logo.png" alt="AquaVistaPure Logo">
+  <span>AquaVistaPure</span>
+</div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+    </div>
+  </nav>
+
+  <!-- ================= HEADER ================= -->
+  <header class="products-header">
+    <h1>Our Products</h1>
+    <p>Premium customised water bottles</p>
+  </header>
+
+  <!-- ================= PRODUCTS ================= -->
+  <section class="products-section">
+    <div id="products" class="products-grid"></div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <p>© 2025 AquaVistaPure</p>
+  </footer>
+
+  <!-- ================= FETCH PRODUCTS ================= -->
+  <script>
+    fetch("https://aquavistapure-backend.onrender.com/api/products")
+      .then(res => res.json())
+      .then(data => {
+        const box = document.getElementById("products");
+        box.innerHTML = "";
+
+        data.forEach(p => {
+          const name = p.name || "AquaVistaPure Bottle";
+
+          box.innerHTML += `
+            <div class="product-card">
+              <div class="product-img">
+                <img src="${p.image}" alt="${name}" loading="lazy">
+              </div>
+
+              <h3>${name}</h3>
+
+              <p class="price">₹${p.price}</p>
+
+              <a class="cta-primary"
+                 target="_blank"
+                 href="https://wa.me/918235133843?text=I%20want%20to%20order%20${encodeURIComponent(name)}">
+                 Order on WhatsApp
+              </a>
+            </div>
+          `;
+        });
+      });
+  </script>
+
+</body>
+</html>

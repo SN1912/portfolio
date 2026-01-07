@@ -3,367 +3,150 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MD SHAMSH NAWED | Portfolio</title>
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png">
+ <title>AquaVista Pure | Premium Customized Mineral Water Bottles</title>
 
-  <style>
-    /* ===== Global Styles ===== */
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 80px;
-    }
+  <link rel="canonical" href="https://aquavistapure.site/">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: #333;
-      background: linear-gradient(135deg, #7bd6e1, #c05cbf);
-      background-attachment: scroll;
-      background-size: cover;
-    }
 
-    a { text-decoration: none; }
+  <!-- SEO -->
+     <meta name="description" content="AquaVista Pure provides premium customized mineral water bottles for events, hotels, offices and     corporate branding across India.">
+   <meta name="keywords" content="custom water bottle, customized mineral water bottle, branded water bottles, corporate water bottles,   event water bottles India"> 
+  <meta name="author" content="AquaVistaPure">
 
-    /* ===== Header ===== */
-    header {
-      background: rgba(44, 62, 80, 0.85);
-      color: #fff;
-      padding: 40px 20px;
-      text-align: center;
-      border-bottom: 4px solid #fff;
-    }
+  <!-- FAVICON -->
+  <link rel="icon" href="favicon.png">
 
-    header img {
-      width: 150px;
-      height: 150px;
-      max-width: 40vw;
-      max-height: 40vw;
-      border-radius: 50%;
-      border: 4px solid #fff;
-      display: block;
-      margin: 0 auto 20px auto;
-      object-fit: cover;
-      object-position: center;
-    }
-
-    header h1 { margin: 0; font-size: 2.5em; }
-    header p { margin-top: 10px; font-size: 1.2em; }
-
-    /* ===== Navbar ===== */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      display: flex;
-      justify-content: center; /* Center links on desktop */
-      gap: 15px;
-      padding: 10px 20px;
-      background: rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255,255,255,0.3);
-      overflow-x: auto; /* allow scroll if needed */
-      white-space: nowrap;
-      scroll-behavior: smooth;
-    }
-
-    nav a {
-      color: #fff;
-      font-weight: bold;
-      padding: 8px 15px;
-      border-radius: 5px;
-      flex-shrink: 0;
-      transition: 0.3s;
-      display: inline-block;
-    }
-
-    nav a.active {
-      color: #ffd700;
-      background: rgba(255,255,255,0.3);
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-      color: #ffd700;
-    }
-
-    nav::-webkit-scrollbar {
-      height: 5px;
-    }
-    nav::-webkit-scrollbar-thumb {
-      background: rgba(255,255,255,0.3);
-      border-radius: 5px;
-    }
-
-    /* ===== Mobile Adjustments ===== */
-    @media (max-width: 900px) {
-      nav {
-        justify-content: flex-start; /* left-align links */
-        padding: 10px 10px; /* reduce padding */
-        gap: 10px; /* smaller gap */
-      }
-      nav a {
-        padding: 6px 10px;
-        font-size: 0.9em;
-      }
-    }
-
-    @media (max-width: 600px) {
-      nav {
-        gap: 8px;
-      }
-      nav a {
-        padding: 5px 8px;
-        font-size: 0.85em;
-      }
-    }
-
-    /* ===== Sections ===== */
-    section {
-      padding: 40px 15px;
-      max-width: 95%;
-      margin: 40px auto;
-      background: rgba(255, 255, 255, 0.3);
-      backdrop-filter: blur(10px);
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-      opacity: 0;
-      transform: translateY(50px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #2c3e50;
-    }
-
-    p { line-height: 1.6; text-align: center; }
-
-    /* ===== Education ===== */
-    .education-cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 20px;
-    }
-
-    .edu-card {
-      flex: 1 1 200px;
-      max-width: 250px;
-      background: rgba(255,255,255,0.8);
-      padding: 20px;
-      border-radius: 8px;
-      text-align: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .edu-card h3 {
-      margin-bottom: 10px;
-      font-size: 1.2em;
-      color: #2c3e50;
-    }
-
-    .edu-card p {
-      margin: 5px 0;
-      font-size: 1em;
-    }
-
-    .edu-card:hover {
-      transform: translateY(-5px);
-      background: rgba(255,255,255,1);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
-    }
-
-    /* ===== Skills ===== */
-    .skills {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
-    .skill {
-      background: rgba(255,255,255,0.8);
-      padding: 15px 25px;
-      border-radius: 5px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    .skill:hover { background: rgba(255,255,255,1); }
-
-    /* ===== Projects ===== */
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
-      margin-top: 20px;
-    }
-    .project {
-      background: rgba(255,255,255,0.8);
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease, background 0.3s ease;
-    }
-    .project:hover {
-      transform: translateY(-5px);
-      background: rgba(255,255,255,1);
-    }
-
-    /* ===== Contact ===== */
-    .contact p { font-size: 1.1em; margin: 10px 0; }
-    .contact a { color: #2980b9; transition: 0.3s; }
-    .contact a:hover { text-decoration: underline; color: #ffd700; }
-
-    /* ===== Footer ===== */
-    footer {
-      background: rgba(44, 62, 80, 0.9);
-      color: #fff;
-      text-align: center;
-      padding: 15px 10px;
-      margin-top: 40px;
-    }
-  </style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <img src="profile.jpg" alt="MD SHAMSH NAWED">
-    <h1>MD SHAMSH NAWED</h1>
-    <p>2nd Year B.Tech CSE Student | Aspiring Software Engineer</p>
-  </header>
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar">
+ <div class="nav-logo">
+  <img src="logo.png" alt="AquaVistaPure Logo">
+  <span>AquaVistaPure</span>
+</div>
 
-  <!-- Navbar -->
-  <nav>
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="products.html">Products</a>
+      <a href="#contact">Contact</a>
+    </div>
   </nav>
 
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I am currently a 2nd year B.Tech CSE student passionate about software development, problem-solving, 
-      and building projects. I enjoy learning new technologies and improving my coding skills to prepare 
-      for a career in software engineering.
-    </p>
-  </section>
+  <!-- ================= HERO (PAGE 1) ================= -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
 
-  <!-- Education Section -->
-  <section id="education">
-    <h2>🎓 Education</h2>
-    <div class="education-cards">
-      <div class="edu-card">
-        <h3>Allama Iqbal College</h3>
-        <p>High School</p>
+      <div class="hero-text">
+        <span class="tagline">WHERE IMAGINATION BECOMES REAL</span>
+
+        <h1>
+          Build<br>
+          Your<br>
+          Brand
+        </h1>
+
+        <p class="subtitle">
+          Premium custom water bottles<br>
+          designed for modern brands.
+        </p>
+
+        <a href="products.html" class="cta-btn">Explore Products</a>
       </div>
-      <div class="edu-card">
-        <h3>Budge Budge Institute of Technology (BBIT), Kolkata</h3>
-        <p>B.Tech in Computer Science & Engineering</p>
-        <p>Graduation Year: <strong>2028</strong></p>
+
+      <div class="hero-image">
+        <img src="images/aquavista-bottle.png" alt="AquaVista Bottle">
       </div>
+
     </div>
   </section>
 
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills">
-      <div class="skill">C</div>
-      <div class="skill">Python</div>
-      <div class="skill">Java</div>
+  <!-- ================= SERVICES (PAGE 2) ================= -->
+  <section class="services">
+
+    <div class="services-header">
+      <h2>What We Offer</h2>
+      <p>Customise the bottle with your brand. We’re here to help.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <h3>🎨 Custom Branding</h3>
+        <p>🏷️ Your logo, your identity.<br>✨ Premium printed labels.</p>
+      </div>
+
+      <div class="service-card highlight">
+        <h3>📦 Bulk Supply</h3>
+        <p>🏢 Offices & 🎉 corporate events<br>handled professionally.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>💎 Premium Quality</h3>
+        <p>🧪 High-quality PET bottles<br>🛡️ Safe & hygienic packaging.</p>
+      </div>
+
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="project">
-        <h3>Digital Dice Roller</h3>
-        <p>A dice roller circuit using IC 555 & 4017 to generate random numbers 1–6, displayed on LEDs.</p>
+  <!-- ================= FAQ (PAGE 3) ================= -->
+  <section class="faq">
+
+    <div class="faq-header">
+      <span class="faq-tag">NEED HELP?</span>
+      <h2>Frequently Asked Questions</h2>
+      <p>Everything you need to know before ordering</p>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3>🎨 Can I customise bottles?</h3>
+        <p>Yes, complete logo & label customisation is available.</p>
       </div>
-      <div class="project">
-        <h3>Portfolio Website</h3>
-        <p>This website itself is one of my projects, built with HTML & CSS to showcase my skills.</p>
+
+      <div class="faq-item">
+        <h3>📦 Do you take bulk orders?</h3>
+        <p>Yes, bulk and corporate orders are our speciality.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>🚚 Delivery time?</h3>
+        <p>Usually 7–10 working days after confirmation.</p>
       </div>
     </div>
+
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <p>📧 Email: <a href="mailto:Shamshnawed781@gmail.com">Shamshnawed781@gmail.com</a></p>
-    <p>💼 GitHub: <a href="https://github.com/SN1912" target="_blank">github.com/SN1912</a></p>
-    <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/shamshn/" target="_blank">linkedin.com/in/shamshn</a></p>
+  <!-- ================= FINAL CTA (PAGE 4) ================= -->
+  <section class="final-cta" id="contact">
+
+    <div class="cta-box">
+      <span class="cta-tag">READY TO ORDER?</span>
+
+      <h2>Let’s build your brand<br>with AquaVistaPure</h2>
+
+      <p>Premium customised water bottles for all needs.</p>
+
+      <div class="cta-actions">
+        <a href="products.html" class="cta-secondary">View Products</a>
+        <a href="https://wa.me/918235133843" target="_blank" class="cta-primary">
+          💬 Order on WhatsApp
+        </a>
+      </div>
+    </div>
+
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 MD SHAMSH NAWED | All Rights Reserved</p>
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    © 2025 AquaVistaPure. All rights reserved.
   </footer>
-
-  <!-- ===== Scroll Animation & Navbar Highlight JS ===== -->
-  <script>
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('nav a');
-    const nav = document.querySelector('nav');
-
-    // Fade-in animation
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.2 });
-
-    sections.forEach(section => observer.observe(section));
-
-    // Navbar highlight on scroll
-    window.addEventListener('scroll', () => {
-      let current = '';
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 90;
-        const sectionHeight = section.offsetHeight;
-        if(scrollY >= sectionTop && scrollY < sectionTop + sectionHeight){
-          current = section.getAttribute('id');
-        }
-      });
-
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if(link.getAttribute('href') === `#${current}`){
-          link.classList.add('active');
-        }
-      });
-    });
-
-    // Optional: highlight on page load
-    window.dispatchEvent(new Event('scroll'));
-
-    // Smooth navbar scroll for mobile
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        link.scrollIntoView({ behavior: 'smooth', inline: 'center' });
-      });
-    });
-  </script>
 
 </body>
 </html>
